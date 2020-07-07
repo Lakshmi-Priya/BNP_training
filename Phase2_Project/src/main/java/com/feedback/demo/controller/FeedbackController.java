@@ -15,9 +15,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-//import com.animal.model.Animal;
+
 import com.feedback.demo.exception.BusinessException;
-//import com.animal.service.AnimalService;
 import com.feedback.demo.model.*;
 import com.feedback.demo.service.*;
 
