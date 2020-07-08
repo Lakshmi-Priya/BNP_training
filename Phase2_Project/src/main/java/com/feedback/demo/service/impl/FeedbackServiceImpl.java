@@ -33,8 +33,21 @@ public class FeedbackServiceImpl implements FeedbackService {
 	}
 
 	@Override
-	public Feedback updateFeedback(Feedback feedback) {
-		return dao.save(feedback);
+	public String updateFeedback(Feedback feedback)throws BusinessException {
+		
+		//return dao.save(feedback);
+		Feedback feedback1=null;
+		try {
+			feedback1=dao.findById(feedback.getId()).get();
+			if(feedback1.getId()==feedback.getId()) {
+				dao.save(feedback);
+				return "Succesfully updated";
+			}
+			
+			}catch(NoSuchElementException e) {
+				throw new BusinessException("Id "+feedback.getId()+" does not exits");
+			}
+			return null;
 	}
 
 	@Override

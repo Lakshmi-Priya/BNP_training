@@ -14,7 +14,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SpringBootUserFeedbackApplication {
 
-	//jdbc:h2:mem:testdb
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootUserFeedbackApplication.class, args);
 	}
